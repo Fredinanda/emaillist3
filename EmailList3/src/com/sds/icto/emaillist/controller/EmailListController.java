@@ -22,11 +22,11 @@ public class EmailListController {
 	public String index( Model model) {
 		List<EmailListVo> list = emailListDao.fetchList();
 		model.addAttribute( "list", list );
-		return "/views/show_emaillist.jsp";
+		return "show_emaillist";
 	}
 	@RequestMapping( "/form" )
 	public String form(){
-		return "/views/form_emaillist.jsp";
+		return "form_emaillist";
 				
 	}
 	
